@@ -12,7 +12,10 @@
 #include <iostream>
 #include "Particle.h"
 
+class ParticleContactResolver;
+
 class ParticleContact {
+    friend class ParticleContactResolver;
 public:
     Particle *particle[2];
     real restitutionCoeff;
@@ -25,6 +28,21 @@ protected:
 private:
     void resolveVelocity(real deltaTime);
     void resolveInterpenetration(real deltaTime);
+};
+
+class ParticleContactResolver {
+protected:
+    unsigned iterations;
+    unsigned iterationsUsed;
+public:
+    ParticleContactResolver(unsigned iterations);
+    void setIterations(unsigned iterations);
+    void resolveContacts(ParticleContact *contactArray, unsigned numContacts, real deltaTime);
+};
+
+class ParticleContactGenerator {
+public:
+    virtual unsigned addContact(ParticleContact *contact, unsigned limit)=0;
 };
 
 #endif /* defined(__BasicPhysicsEngine__ParticleContact__) */
