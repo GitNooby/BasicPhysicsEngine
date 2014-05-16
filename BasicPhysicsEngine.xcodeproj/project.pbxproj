@@ -13,6 +13,7 @@
 		6E34487219258C2500D1990D /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E34487019258C2500D1990D /* Particle.cpp */; };
 		6E34487619258CA100D1990D /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E34487419258CA100D1990D /* Vector3.cpp */; };
 		6E34487A1925B8D500D1990D /* ParticleForceGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E3448781925B8D500D1990D /* ParticleForceGenerator.cpp */; };
+		6E34487D1925CD3F00D1990D /* ParticleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E34487B1925CD3F00D1990D /* ParticleContact.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		6E34487719258D9500D1990D /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		6E3448781925B8D500D1990D /* ParticleForceGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleForceGenerator.cpp; sourceTree = "<group>"; };
 		6E3448791925B8D500D1990D /* ParticleForceGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleForceGenerator.h; sourceTree = "<group>"; };
+		6E34487B1925CD3F00D1990D /* ParticleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleContact.cpp; sourceTree = "<group>"; };
+		6E34487C1925CD3F00D1990D /* ParticleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleContact.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				6E34487119258C2500D1990D /* Particle.h */,
 				6E3448781925B8D500D1990D /* ParticleForceGenerator.cpp */,
 				6E3448791925B8D500D1990D /* ParticleForceGenerator.h */,
+				6E34487B1925CD3F00D1990D /* ParticleContact.cpp */,
+				6E34487C1925CD3F00D1990D /* ParticleContact.h */,
 			);
 			name = Particle;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E34486419258B6700D1990D /* main.mm in Sources */,
+				6E34487D1925CD3F00D1990D /* ParticleContact.cpp in Sources */,
 				6E34487A1925B8D500D1990D /* ParticleForceGenerator.cpp in Sources */,
 				6E34487619258CA100D1990D /* Vector3.cpp in Sources */,
 				6E34487219258C2500D1990D /* Particle.cpp in Sources */,

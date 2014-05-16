@@ -56,6 +56,9 @@ real Particle::getDamping() const {
 }
 
 // position getters and setters
+void Particle::setPosition(const Vector3 &p) {
+    position = p;
+}
 void Particle::setPosition(const real x, const real y, const real z) {
     position.x=x; position.y=y; position.z=z;
 }
@@ -67,6 +70,9 @@ Vector3 Particle::getPosition() const {
 }
 
 // velocity getters and setters
+void Particle::setVelocity(const Vector3 &v) {
+    velocity = v;
+}
 void Particle::setVelocity(const real x, const real y, const real z) {
     velocity.x=x; velocity.y=y; velocity.z=z;
 }

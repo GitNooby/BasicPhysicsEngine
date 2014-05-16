@@ -38,11 +38,13 @@ public:
     real getDamping() const;
     
     // position getters and setters
+    void setPosition(const Vector3 &p);
     void setPosition(const real x, const real y, const real z);
     void getPosition(Vector3 *p);
     Vector3 getPosition() const;
     
     // velocity getters and setters
+    void setVelocity(const Vector3 &v);
     void setVelocity(const real x, const real y, const real z);
     void getVelocity(Vector3 *v);
     Vector3 getVelocity();
