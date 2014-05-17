@@ -14,6 +14,7 @@
 
 class ParticleContactResolver;
 
+// An object to track a particular contact between two particles
 class ParticleContact {
     friend class ParticleContactResolver;
 public:
@@ -30,6 +31,7 @@ private:
     void resolveInterpenetration(real deltaTime);
 };
 
+// The engine used to resolve contacts
 class ParticleContactResolver {
 protected:
     unsigned iterations;
@@ -40,9 +42,60 @@ public:
     void resolveContacts(ParticleContact *contactArray, unsigned numContacts, real deltaTime);
 };
 
+// The base class engine used to detect types collisions
 class ParticleContactGenerator {
 public:
     virtual unsigned addContact(ParticleContact *contact, unsigned limit)=0;
 };
 
+// Base class for generating contacts between 2 particles
+class ParticleLink : public ParticleContactGenerator {
+public:
+    Particle* particle[2];
+protected:
+    real currentLength() const;
+public:
+    virtual unsigned addContact(ParticleContact *contact, unsigned limit)const=0;
+};
+
+// Rope class, subclass of ParticleLink
+class ParticleRope : public ParticleLink {
+public:
+    real maxLength;
+    real restitution;
+public:
+    virtual unsigned addContact(ParticleContact *contact, unsigned limit)const;
+};
+
+// Rigid stick, subclass of ParticleLink
+class ParticleStick : public ParticleLink {
+public:
+    real stickLength;
+    virtual unsigned addContact(ParticleContact *contact, unsigned limit)const;
+};
+
+
+
 #endif /* defined(__BasicPhysicsEngine__ParticleContact__) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

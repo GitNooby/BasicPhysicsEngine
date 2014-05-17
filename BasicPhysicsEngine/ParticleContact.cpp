@@ -132,12 +132,44 @@ void ParticleContactResolver::resolveContacts(ParticleContact *contactArray, uns
 
 
 
+real ParticleLink::currentLength() const {
+    return (particle[0]->getPosition()-particle[1]->getPosition()).magnitude();
+}
+
+
+unsigned ParticleRope::addContact(ParticleContact *contact, unsigned limit)const {
+    real length = this->currentLength();
+    if (length < maxLength) return 0;
+    contact->particle[0] = particle[0];
+    contact->particle[1] = particle[1];
+    
+    Vector3 contactNormal = particle[1]->getPosition()-particle[0]->getPosition();
+    contactNormal.normalize();
+    contact->contactNormal = contactNormal;
+    contact->penetration = length-maxLength;
+    contact->restitutionCoeff = restitution;
+    return 1;
+}
 
 
 
-
-
-
+unsigned ParticleStick::addContact(ParticleContact *contact, unsigned limit)const {
+    real currentLen = this->currentLength();
+    if (currentLen == this->stickLength) return 0;
+    contact->particle[0] = particle[0];
+    contact->particle[1] = particle[1];
+    Vector3 contactNormal = particle[1]->getPosition()-particle[0]->getPosition();
+    contactNormal.normalize();
+    if (currentLen > this->stickLength) {
+        contact->contactNormal = contactNormal;
+        contact->penetration = currentLen - this->stickLength;
+    } else {
+        contact->contactNormal = contactNormal * -1;
+        contact->penetration = this->stickLength - currentLen;
+    }
+    contact->restitutionCoeff = 0;
+    return 1;
+}
 
 
 
