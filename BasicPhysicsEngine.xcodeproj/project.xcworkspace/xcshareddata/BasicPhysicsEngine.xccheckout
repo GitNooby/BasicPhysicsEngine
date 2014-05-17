@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8C844F75-860E-43BE-916A-3353ED2FD4AB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BasicPhysicsEngine</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0DB3DC63-C1AC-404B-85C5-A160B6BFA6FA</key>
+		<string>https://github.com/GitNooby/BasicPhysicsEngine</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BasicPhysicsEngine.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0DB3DC63-C1AC-404B-85C5-A160B6BFA6FA</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GitNooby/BasicPhysicsEngine</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0DB3DC63-C1AC-404B-85C5-A160B6BFA6FA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0DB3DC63-C1AC-404B-85C5-A160B6BFA6FA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BasicPhysicsEngine</string>
+		</dict>
+	</array>
+</dict>
+</plist>

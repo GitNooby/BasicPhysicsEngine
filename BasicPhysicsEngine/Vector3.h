@@ -20,53 +20,53 @@ private:
 public:
     Vector3(){ x=0; y=0; z=0; }
     Vector3(real x, real y, real z){ this->x=x; this->y=y; this->z=z; }
-    void invert() { x=-x; y=-y; z=-z; }
-    real magnitude() const {
+    inline void invert() { x=-x; y=-y; z=-z; }
+    inline real magnitude() const {
         return sqrt(x*x + y*y + z*z);
     }
-    real magnitudeSquared() const {
+    inline real magnitudeSquared() const {
         return x*x+y*y+z*z;
     }
-    void normalize() {
+    inline void normalize() {
         real len = magnitude();
         if (len > 0) {
-            (*this) *= ((real)1)/len; // overloaded *=
+            (*this) *= ((real)1)/len; // using overloaded *=
         }
     }
     
-    void clearVector() {
+    inline void clearVector() {
         x = y = z = 0;
     }
     
     // component-wise multiplication of two vectors
-    Vector3 componentProduct(const Vector3 &vect) const {
+    inline Vector3 componentProduct(const Vector3 &vect) const {
         return Vector3(x*vect.x, y*vect.y, z*vect.z);
     }
-    void componentProductUpdate(const Vector3 &vect) {
+    inline void componentProductUpdate(const Vector3 &vect) {
         x *= vect.x; y *= vect.y; z *= vect.z;
     }
     
     // dot product
-    real dotProduct(const Vector3 &vect) const {
+    inline real dotProduct(const Vector3 &vect) const {
         return x*vect.x + y*vect.y + z*vect.z;
     }
-    real operator*(const Vector3 &vect) const {
+    inline real operator*(const Vector3 &vect) const {
         return x*vect.x + y*vect.y + z*vect.z;
     }
     
     // cross product
-    Vector3 crossProduct(const Vector3 &vect) const {
+    inline Vector3 crossProduct(const Vector3 &vect) const {
         return Vector3(y*vect.z - z*vect.y, z*vect.x - x*vect.z, x*vect.y - y*vect.x);
     }
-    void operator%=(const Vector3 &vect) {
+    inline void operator%=(const Vector3 &vect) {
         *this = crossProduct(vect);
     }
-    Vector3 operator%(const Vector3 &vect) const {
+    inline Vector3 operator%(const Vector3 &vect) const {
         return Vector3(y*vect.z - z*vect.y, z*vect.x - x*vect.z, x*vect.y - y*vect.x);
     }
     
     // generates orthonormal basis vectors from inputs
-    bool generateOrthonormalBasis(Vector3 *A, Vector3 *B, Vector3 *C) {
+    inline bool generateOrthonormalBasis(Vector3 *A, Vector3 *B, Vector3 *C) {
         // returns true if orthonormal bases can be generated, false otherwise
         A->normalize();                                 // 1. normalize A
         *C = *A % *B;                                   // 2. find C from AxB
@@ -77,7 +77,7 @@ public:
     }
     
     // a short hand for: V1=V1+V2*s
-    void addScaledVector(const Vector3 &vect, real scalar) {
+    inline void addScaledVector(const Vector3 &vect, real scalar) {
         x = x + vect.x * scalar;
         y = y + vect.y * scalar;
         z = z + vect.z * scalar;
@@ -85,27 +85,27 @@ public:
     
     /* Overloaded operators */
     // vector scalar multiplication
-    void operator*=(const real scalar) {
+    inline void operator*=(const real scalar) {
         x *= scalar; y *= scalar; z *= scalar;
     }
     // vector scalar multiplication
-    Vector3 operator*(const real scalar) const {
+    inline Vector3 operator*(const real scalar) const {
         return Vector3(x*scalar, y*scalar, z*scalar);
     }
     // vector vector addition
-    void operator+=(const Vector3 &vect) {
+    inline void operator+=(const Vector3 &vect) {
         x+=vect.x; y+=vect.y; z+=vect.z;
     }
     // vector vector addition
-    Vector3 operator+(const Vector3 &vect) const {
+    inline Vector3 operator+(const Vector3 &vect) const {
         return Vector3(x+vect.x, y+vect.y, z+vect.z);
     }
     // vector vector subtraction
-    void operator-=(const Vector3 &vect) {
+    inline void operator-=(const Vector3 &vect) {
         x-=vect.x; y-=vect.y; z-=vect.z;
     }
     // vector vector subtraction
-    Vector3 operator-(const Vector3 &vect) const {
+    inline Vector3 operator-(const Vector3 &vect) const {
         return Vector3(x-vect.x, y-vect.y, z-vect.z);
     }
     
