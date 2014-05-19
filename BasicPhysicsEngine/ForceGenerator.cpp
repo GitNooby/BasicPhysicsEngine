@@ -17,19 +17,19 @@ void Gravity::updateForce(RigidBody *body, real duration) {
 }
 
 Spring::Spring(const Vector3 &localConnectionPt, RigidBody *otherBody, const Vector3 &otherConnectionPt, real springConstant, real restLength) {
-    Spring::localConnectionPt = localConnectionPt;
+    this->localConnectionPoint = localConnectionPt;
     Spring::other = otherBody;
-    Spring::otherConnectionPt = otherConnectionPt;
+    Spring::otherConnectionPoint = otherConnectionPt;
     Spring::springConstant = springConstant;
-    Spring::restLength;
+    Spring::restLength = restLength;
 }
 void Spring::updateForce(RigidBody *body, real duration) {
     // find the ends of spring connections in world space
-    Vector3 lws = body->getPointInWorldSpace(connectionPoint);
-    Vector3 ows = body->getPointInWorldSpace(otherConnectionPt);
+    Vector3 lws = body->getPointInWorldSpace(localConnectionPoint);
+    Vector3 ows = body->getPointInWorldSpace(otherConnectionPoint);
     Vector3 force = lws - ows;
     // find force mangitude
-    real mangitude = force.mangitude();
+    real mangitude = force.magnitude();
     mangitude = abs(mangitude-restLength);
     mangitude *= springConstant;
     // find force and apply

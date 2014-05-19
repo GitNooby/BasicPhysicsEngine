@@ -24,13 +24,13 @@ public:
 };
 
 class Spring : public ForceGenerator {
-    Vector3 connectionPoint;     // connection point on object A in local coord
+    Vector3 localConnectionPoint;     // connection point on object A in local coord
     Vector3 otherConnectionPoint; // connection point on object B in local coord
     RigidBody *other;
     real springConstant, restLength;
 public:
     Spring(const Vector3 &localConnectionPt, RigidBody *otherBody, const Vector3 &otherConnectionPt, real springConstant, real restLength);
-    virtual void updateForce(rigidbody *body, real duration);
+    virtual void updateForce(RigidBody *body, real duration);
 };
 
 #endif /* defined(__BasicPhysicsEngine__ForceGenerator__) */
