@@ -14,6 +14,7 @@
 		6E34487619258CA100D1990D /* Vector3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E34487419258CA100D1990D /* Vector3.cpp */; };
 		6E34487A1925B8D500D1990D /* ParticleForceGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E3448781925B8D500D1990D /* ParticleForceGenerator.cpp */; };
 		6E34487D1925CD3F00D1990D /* ParticleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E34487B1925CD3F00D1990D /* ParticleContact.cpp */; };
+		6E36ECC91929769600B3D56E /* RigidBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E36ECC71929769600B3D56E /* RigidBody.cpp */; };
 		6E6F47401927CFD600090723 /* Matrix3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F473E1927CFD600090723 /* Matrix3.cpp */; };
 		6E6F47431927D05900090723 /* Matrix4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F47411927D05900090723 /* Matrix4.cpp */; };
 		6E6F47461927E8DE00090723 /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F47441927E8DE00090723 /* Quaternion.cpp */; };
@@ -47,6 +48,8 @@
 		6E3448791925B8D500D1990D /* ParticleForceGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleForceGenerator.h; sourceTree = "<group>"; };
 		6E34487B1925CD3F00D1990D /* ParticleContact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleContact.cpp; sourceTree = "<group>"; };
 		6E34487C1925CD3F00D1990D /* ParticleContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleContact.h; sourceTree = "<group>"; };
+		6E36ECC71929769600B3D56E /* RigidBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RigidBody.cpp; sourceTree = "<group>"; };
+		6E36ECC81929769600B3D56E /* RigidBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RigidBody.h; sourceTree = "<group>"; };
 		6E6F473E1927CFD600090723 /* Matrix3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix3.cpp; sourceTree = "<group>"; };
 		6E6F473F1927CFD600090723 /* Matrix3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix3.h; sourceTree = "<group>"; };
 		6E6F47411927D05900090723 /* Matrix4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix4.cpp; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 		6E6F47471927F06E00090723 /* RigidBody */ = {
 			isa = PBXGroup;
 			children = (
+				6E36ECC71929769600B3D56E /* RigidBody.cpp */,
+				6E36ECC81929769600B3D56E /* RigidBody.h */,
 			);
 			name = RigidBody;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				6E34486419258B6700D1990D /* main.mm in Sources */,
 				6E34487D1925CD3F00D1990D /* ParticleContact.cpp in Sources */,
 				6E34487A1925B8D500D1990D /* ParticleForceGenerator.cpp in Sources */,
+				6E36ECC91929769600B3D56E /* RigidBody.cpp in Sources */,
 				6E34487619258CA100D1990D /* Vector3.cpp in Sources */,
 				6E6F47461927E8DE00090723 /* Quaternion.cpp in Sources */,
 				6E34487219258C2500D1990D /* Particle.cpp in Sources */,
